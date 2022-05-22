@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Table} from 'react-bootstrap'
+import {ButtonToolbar, Button} from 'react-bootstrap'
 import './Home.css';
 import axios from 'axios';
 
@@ -26,16 +26,26 @@ export class Home extends Component {
     this.refreshList();
   }
 
+  deleteHero(heros_id){
+    if(window.confirm("are you sure?")){
+      fetch(process.env.REACT_APP_API+'heroes/'+heros_id,{
+        method:'DELETE',
+        header:{'Accept':'application/json'},
+        'Content-Type':'application/json'
+      })
+    }
+  }
+
   render(){
     const {heros}=this.state;
     return (
-      <div class="table_background">
-        <Table className="mt-4" striped bordered hover size="sm">
+      <div>
+        <table class="content-table">
             <thead>
               <tr>
                 <th>Name</th>
                 <th>Alias</th>
-                <th>Options</th>
+                <th text-align="center">Options</th>
               </tr>
             </thead>
             <tbody>
@@ -43,10 +53,17 @@ export class Home extends Component {
                   <tr key={hero.heros_id}>
                     <td>{hero.name}</td>
                     <td>{hero.alias}</td>
-                    <td>Edit / Delete</td>
+                    <td>
+                      <ButtonToolbar>
+                        <Button className="mr-2" variant="danger"
+                        onClick={()=>this.deleteHero(hero.heros_id)}>
+                          Delete
+                        </Button>
+                      </ButtonToolbar>
+                    </td>
                   </tr>)}
             </tbody>
-        </Table> 
+        </table> 
       </div>
     );
   }

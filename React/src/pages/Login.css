@@ -1,7 +1,7 @@
 /* global variables for some reocurring stuff*/
 :root {
-    --main-color: #ff2600;
-    --secondary-color: #d32102;
+    --main-color: #0d6efd;
+    --secondary-color: #0e55be;
   }
   
   @font-face {
@@ -205,4 +205,8 @@
 
   .google-logo:hover ~ .alter_login {
     text-decoration: underline;
+  }
+
+  .google-logo:hover{
+    cursor: pointer;
   }
