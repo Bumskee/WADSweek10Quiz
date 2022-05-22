@@ -85,8 +85,7 @@ DATABASES = {
         'CLIENT': {
             "host": "mongodb+srv://test:test@bumskeecluster.xak9j.mongodb.net/?retryWrites=true&w=majority",
             "name": "herosdb",
-            "authMechanism":"SCRAM-SHA-1",
-            
+            "authMechanism":"SCRAM-SHA-1"
         }
     }
 }
