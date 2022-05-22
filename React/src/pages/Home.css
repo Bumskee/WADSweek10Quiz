@@ -1,0 +1,9 @@
+.table_background{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    background: rgb(238, 238, 238);
+    border-radius: 10px;
+  }

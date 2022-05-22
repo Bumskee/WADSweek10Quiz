@@ -18,7 +18,7 @@ const Login = ({setIsAuth}) => {
     <div className="Login">
       <div class = "login_box_back"></div>
       <div class="login_box_front">
-          <h1>Login</h1>
+          <h1 class = "LoginHeader">Login</h1>
           <form method="post">
               <div class="txt_field">
                   <input type="text" required/>
@@ -32,12 +32,14 @@ const Login = ({setIsAuth}) => {
               </div>
               <div class="pass"> <a href="#">Forgot Password?</a> </div>
               <input type="submit" value="Login"/>
-              <div class="signup_link">
+              <div class="signup_link linkto">
                   Don't have an account? <a href="#">Sign up</a>
               </div>
               <p class="or">-or-</p>
-              <p class="alter_login login_google">Use your Google Account</p>
-              <img class="google-logo login_google" src={GoogleLogo} onClick={SignInWithGoogle}/>
+              <div class="login_google">
+                <img class="google-logo beside" src={GoogleLogo} onClick={SignInWithGoogle}/>
+                <p class="alter_login beside">Use your Google Account</p>                
+              </div>
           </form>
         </div>
     </div>

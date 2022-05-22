@@ -20,7 +20,7 @@ const App = () => {
         <nav>
             <Link to="/">Home</Link>
             <Link to="/createpost">Post</Link>
-            {!isAuth ? <Link to="/login">Login</Link> : <button onClick={SignUserOut}>Logout</button>}
+            {!isAuth ? <Link to="/login">Login</Link> : <button class = 'astext' onClick={SignUserOut}>Logout</button>}
         </nav>
         <Routes>
             <Route path="/" element={<Home />} />
