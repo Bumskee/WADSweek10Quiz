@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {ButtonToolbar, Button} from 'react-bootstrap'
 import './Home.css';
-import axios from 'axios';
 
 export class Home extends Component {
 
