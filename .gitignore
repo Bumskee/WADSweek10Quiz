@@ -3,3 +3,6 @@ Django/env/
 Django/db.sqlite3
 .DS_Store
 React/.env
+Django/Dockerfile
+React/Dockerfile
+docker-compose.yaml
